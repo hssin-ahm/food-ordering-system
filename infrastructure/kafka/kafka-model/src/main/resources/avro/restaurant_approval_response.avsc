@@ -43,7 +43,7 @@
       "type": {
         "type": "enum",
         "name": "OrderApprovalStatus",
-        "symbols": ["APPROVED", "REJECTED"]
+        "symbols": ["APPROVED", "REJECTED", "CANCELLED"]
       }
     },
     {
