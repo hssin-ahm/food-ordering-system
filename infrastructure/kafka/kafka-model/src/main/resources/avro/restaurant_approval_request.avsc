@@ -36,7 +36,14 @@
       "type": {
         "type": "enum",
         "name": "RestaurantOrderStatus",
-        "symbols": ["PAID"]
+        "symbols": ["PENDING", "CANCELLED"]
+      }
+    },
+    {
+      "name": "customerId",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
       }
     },
     {

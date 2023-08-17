@@ -3,7 +3,7 @@ package com.food.ordering.system.service.domain;
 import com.food.ordering.system.order.service.domain.OrderDomainService;
 import com.food.ordering.system.order.service.domain.OrderDomainServiceImpl;
 import com.food.ordering.system.order.service.domain.ports.output.message.publisher.OrderCancelledRestaurantApproveRequestMessagePublisher;
-import com.food.ordering.system.order.service.domain.ports.output.message.publisher.OrderCreatedRestaurantApproveRequestMessagePublisher;
+import com.food.ordering.system.order.service.domain.ports.output.message.publisher.OrderRestaurantRequestMessagePublisher;
 import com.food.ordering.system.order.service.domain.ports.output.repository.CustomerRepository;
 import com.food.ordering.system.order.service.domain.ports.output.repository.OrderRepository;
 import com.food.ordering.system.order.service.domain.ports.output.repository.RestaurantRepository;
@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Bean;
 public class OrderTestConfiguration {
 
     @Bean
-    public OrderCreatedRestaurantApproveRequestMessagePublisher orderCreatedRestaurantApproveRequestMessagePublisher(){
-        return Mockito.mock(OrderCreatedRestaurantApproveRequestMessagePublisher.class);
+    public OrderRestaurantRequestMessagePublisher orderCreatedRestaurantApproveRequestMessagePublisher(){
+        return Mockito.mock(OrderRestaurantRequestMessagePublisher.class);
     }
 
     @Bean
