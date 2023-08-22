@@ -9,7 +9,7 @@ import java.time.ZonedDateTime;
 
 @AllArgsConstructor
 @Getter
-public class OrderEvent implements DomainEvent<Order> {
+public abstract class OrderEvent implements DomainEvent<Order> {
     private final Order order;
     private final ZonedDateTime createdAt;
 }

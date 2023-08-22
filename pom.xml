@@ -7,7 +7,8 @@
 		<module>common</module>
         <module>infrastructure</module>
 		<module>customer-service</module>
-	</modules>
+        <module>restaurant-service</module>
+    </modules>
 	<parent>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<groupId>org.springframework.boot</groupId>
