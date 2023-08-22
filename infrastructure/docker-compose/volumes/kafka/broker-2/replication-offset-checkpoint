@@ -1,6 +1,6 @@
 0
 57
-__consumer_offsets 29 2
+__consumer_offsets 29 4
 __consumer_offsets 43 0
 __consumer_offsets 0 0
 __consumer_offsets 6 0
@@ -12,10 +12,10 @@ __consumer_offsets 21 0
 __consumer_offsets 19 0
 __consumer_offsets 25 0
 __consumer_offsets 33 0
-__consumer_offsets 41 0
 restaurant-approval-request 0 0
+__consumer_offsets 41 0
 __consumer_offsets 37 0
-__consumer_offsets 8 2
+__consumer_offsets 8 3
 __consumer_offsets 24 0
 __consumer_offsets 49 0
 __consumer_offsets 3 0
@@ -28,14 +28,14 @@ __consumer_offsets 39 0
 __consumer_offsets 2 0
 restaurant-approval-request 2 0
 __consumer_offsets 12 0
-__consumer_offsets 44 0
+__consumer_offsets 44 5
 __consumer_offsets 36 0
 __consumer_offsets 45 0
 __consumer_offsets 16 0
 __consumer_offsets 10 0
 __consumer_offsets 11 0
 restaurant-approval-response 2 0
-_schemas 0 2
+_schemas 0 5
 __consumer_offsets 20 0
 __consumer_offsets 47 0
 __consumer_offsets 18 0
@@ -43,7 +43,7 @@ __consumer_offsets 7 0
 __consumer_offsets 48 0
 __consumer_offsets 22 0
 restaurant-approval-response 1 0
-restaurant-approval-request 1 0
+restaurant-approval-request 1 1
 __consumer_offsets 46 0
 __consumer_offsets 23 0
 __consumer_offsets 42 0

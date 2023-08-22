@@ -12,10 +12,10 @@
     <artifactId>kafka</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>kafka-producer</module>
         <module>kafka-consumer</module>
         <module>kafka-model</module>
         <module>kafka-config-data</module>
+        <module>kafka-producer</module>
     </modules>
 
     <repositories>
@@ -24,6 +24,7 @@
             <url>https://packages.confluent.io/maven/</url>
         </repository>
     </repositories>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -61,5 +62,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>

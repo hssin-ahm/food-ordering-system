@@ -31,27 +31,6 @@ public class OrderMessagingDataMapper {
                 .build();
     }
 
-    public RestaurantApprovalRequestAvroModel
-    orderApproveEventToRestaurantApprovalRequestAvroModel(OrderApproveEvent orderApproveEvent) {
-        Order order = orderApproveEvent.getOrder();
-        return RestaurantApprovalRequestAvroModel.newBuilder()
-                .setId(UUID.randomUUID().toString())
-                .setSagaId("")
-                .setOrderId(order.getId().getValue().toString())
-                .setRestaurantId(order.getRestaurantId().getValue().toString())
-                .setOrderId(order.getId().getValue().toString())
-                .setRestaurantOrderStatus(com.food.ordering.system.kafka.order.avro.model.RestaurantOrderStatus
-                        .valueOf(order.getOrderStatus().name()))
-                .setProducts(order.getItems().stream().map(orderItem ->
-                        com.food.ordering.system.kafka.order.avro.model.Product.newBuilder()
-                                .setId(orderItem.getProduct().getId().getValue().toString())
-                                .setQuantity(orderItem.getQuantity())
-                                .build()).collect(Collectors.toList()))
-                .setPrice(order.getPrice().getAmount())
-                .setCreatedAt(orderApproveEvent.getCreatedAt().toInstant())
-                .setRestaurantOrderStatus(RestaurantOrderStatus.PENDING)
-                .build();
-    }
 
     public RestaurantApprovalRequestAvroModel orderCreatedEventToRestaurantApprovalRequestAvroModel(OrderCreatedEvent domainEvent) {
 
@@ -59,6 +38,7 @@ public class OrderMessagingDataMapper {
         return RestaurantApprovalRequestAvroModel.newBuilder()
                 .setId(UUID.randomUUID().toString())
                 .setSagaId("")
+                .setCustomerId(order.getCustomerId().toString())
                 .setOrderId(order.getId().getValue().toString())
                 .setRestaurantId(order.getRestaurantId().getValue().toString())
                 .setOrderId(order.getId().getValue().toString())
