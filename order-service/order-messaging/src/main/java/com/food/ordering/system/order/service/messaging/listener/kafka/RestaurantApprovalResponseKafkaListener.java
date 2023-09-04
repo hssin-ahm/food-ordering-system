@@ -46,13 +46,15 @@ public class RestaurantApprovalResponseKafkaListener implements KafkaConsumer<Re
                         restaurantApprovalResponseAvroModel.getOrderId());
                 restaurantApprovalResponseMessageListener.orderApproved(orderMessagingDataMapper
                         .approvalResponseAvroModelToApprovalResponse(restaurantApprovalResponseAvroModel));
-            } else if (OrderApprovalStatus.CANCELLED == restaurantApprovalResponseAvroModel.getOrderApprovalStatus()) {
-                log.info("Processing Cancelled approved order for order id: {}",
-                        restaurantApprovalResponseAvroModel.getOrderId());
-                restaurantApprovalResponseMessageListener.orderCancelled(orderMessagingDataMapper
-                        .approvalResponseAvroModelToApprovalResponse(restaurantApprovalResponseAvroModel));
-                
-            } else if (OrderApprovalStatus.REJECTED == restaurantApprovalResponseAvroModel.getOrderApprovalStatus()) {
+            }
+//            else if (OrderApprovalStatus.CANCELLED == restaurantApprovalResponseAvroModel.getOrderApprovalStatus()) {
+//                log.info("Processing Cancelled approved order for order id: {}",
+//                        restaurantApprovalResponseAvroModel.getOrderId());
+//                restaurantApprovalResponseMessageListener.orderCancelled(orderMessagingDataMapper
+//                        .approvalResponseAvroModelToApprovalResponse(restaurantApprovalResponseAvroModel));
+//
+//            }
+            else if (OrderApprovalStatus.REJECTED == restaurantApprovalResponseAvroModel.getOrderApprovalStatus()) {
                 log.info("Processing rejected order for order id: {}, with failure messages: {}",
                         restaurantApprovalResponseAvroModel.getOrderId(),
                         String.join(FAILURE_MESSAGE_DELIMITER,

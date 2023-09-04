@@ -36,7 +36,11 @@ public class OrderDomainServiceImpl implements OrderDomainService{
         log.info("Order with id: {} is approved", order.getId().getValue());
         return new OrderApproveEvent(order, ZonedDateTime.now(ZoneId.of(UTC)), orderApproveEventDomainEventPublisher);
     }
-
+    @Override
+    public void approveOrder(Order order) {
+        order.approve();
+        log.info("Order with id: {} is approved", order.getId().getValue());
+    }
     @Override
     public OrderCancelledEvent cancelOrderApprove(Order order, List<String> failureMessages, DomainEventPublisher<OrderCancelledEvent>
             orderCancelledEventDomainEventPublisher) {
